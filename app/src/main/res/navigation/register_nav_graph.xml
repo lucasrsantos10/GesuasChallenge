@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/register_nav_graph"
+    app:startDestination="@id/dataRegisterFragment">
+
+    <fragment
+        android:id="@+id/dataRegisterFragment"
+        android:name="com.example.gesuaschallenge.register.dataRegister.DataRegisterFragment"
+        android:label="fragment_data_register"
+        tools:layout="@layout/fragment_data_register" >
+        <action
+            android:id="@+id/action_dataRegisterFragment_to_serviceSelectFragment"
+            app:destination="@id/serviceSelectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/serviceSelectFragment"
+        android:name="com.example.gesuaschallenge.register.serviceSelect.ServiceSelectFragment"
+        android:label="fragment_service_select"
+        tools:layout="@layout/fragment_service_select" >
+        <action
+            android:id="@+id/action_serviceSelectFragment_to_sendForwardFragment"
+            app:destination="@id/sendForwardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sendForwardFragment"
+        android:name="com.example.gesuaschallenge.register.sendForward.SendForwardFragment"
+        android:label="fragment_send_foward"
+        tools:layout="@layout/fragment_send_foward" />
+</navigation>
